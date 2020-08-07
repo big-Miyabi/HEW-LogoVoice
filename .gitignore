@@ -1,4 +1,5 @@
 /blobFiles/*
+!/blobFiles/.gitkeep
 /img/*
 !/img/bc1-min.jpg
 !/img/bc1.jpg
