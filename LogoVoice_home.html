@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
+    <title>LogoVoice</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/common.css"></link>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/axios.min.js"></script>
+    <script src="./js/loginCheck.js"></script>
+    <script src="./js/QuestionList.js"></script>
+    <script defer src="./js/fontawesome-free-5.7.2-web/fontawesome-free-5.7.2-web/js/all.js"></script>
+  </head>
+  <body>
+
+  <div id="container">
+
+    <!-- 左カラム -->
+    <div id="leftColumn">
+      <!-- メニューボタンを生成 -->
+      <div class="menuButton">
+        <div class="commonCircle innerCircle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div id="GlobalNavi">
+        <ul>
+          <li><a href="./LogoVoice_home.html">Home</a></li>
+          <!-- <li>Q&A</li> -->
+          <li><a href="./MyPage.html">MyPage</a></li>
+          <li>AskQuestion</li>
+
+          <div id="logReg">
+            <!-- phpでログインチェックした結果を出力 -->
+            <!-- <div class="BtnBg loginBtnBg">
+              <li class="Btn loginBtn">Login</li>
+            </div>
+            <div class="BtnBg RegBtnBg">
+              <li class="Btn RegBtn">Register</li>
+            </div> -->
+          </div>
+
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- 中央カラム -->
+    <div id="middleColumn">
+
+      <div id="title_image">
+        <h1><img id="logo" src="./img/LogoVoice.png" alt="LogoVoice"></h1>
+      </div>
+
+      <div id="please_login">
+        <h2>Welcome to <span>L</span><span>ogovoi</span><span>c</span><span>e</span>!!</h2>
+        <h2>Please login or register!!</h2>
+        <ul>
+          <div class="BtnBg loginBtnBg">
+            <li class="Btn loginBtn">Login</li>
+          </div>
+          <div class="BtnBg RegBtnBg">
+            <li class="Btn RegBtn">Register</li>
+          </div>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <!-- 右カラム -->
+    <div id="rightColumn">
+      <div class="helpButton">
+        <div class="commonCircle helpCircle">
+          <div><img src="./img/question.svg"></div>
+        </div>
+      </div>
+
+      <div id="help">
+        <div>
+          <h2>1. Let's login or register!</h2>
+        </div>
+
+        <p>Please push the upper left menu bar.</p>
+
+        <div>
+          <h2>2. Let's ask question!</h2>
+        </div>
+
+        <p>Record your pronunciation and let others assess it.</p>
+
+        <h2>3. Let's vote!</h2>
+        <p>All questions displayed are appropriate for your language skills. Ask a lot and answer a lot!</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <div id="background"></div>
+    <div id="whitefilter"></div>
+    <div id="formFilter"></div>
+    <div id="AskQuestionFilter"></div>
+
+
+
+
+    <div id="AskQuestion">
+      <div class="AskQuestionClose">
+        <div></div>
+        <div></div>
+      </div>
+
+      <div id="AQLeft">
+        <div id="AQLTop">
+          <div id="AQLAudio">
+            <div id="record">
+              <audio id="player" preload="auto"></audio>
+
+              <div class="progressCircle">
+                <button id="recorder">
+                  <i class="fas fa-microphone-alt font-record"></i>
+                </button>
+              </div>
+            </div>
+
+            <div id="recording_control_wrap">
+              <div id="progressBar"></div>
+              <div id="recording_audio_wrap">
+                <button class="resetBtn RAControlBtn RACreset">≪</button>
+                <button class="resetBtn RAControlBtn RACrewind5s"><</button>
+                <button class="resetBtn RAControlBtn pause"><i class="fas fa-play"></i></button>
+                <button class="resetBtn RAControlBtn RACskip5s">></button>
+                <button class="resetBtn RAControlBtn RACskipNext">≫</button>
+              </div>
+            </div>
+
+          </div>
+          <p>※Please record within 30 seconds.</p>
+        </div>
+
+        <div id="AQLMiddle">
+          <select name="learningLevel">
+            <option value="">select the level of adviser for this question!</option>
+            <option value="NativeSpeaker">Only 7(Native speaker)</option>
+            <option value="Advanced">6(Advanced) and over</option>
+            <option value="Upper-Intermediate">5(Upper-Intermediate) and over</option>
+            <option value="Intermediate">4(Intermediate) and over</option>
+          </select>
+        </div>
+
+        <div id="AQLBottom">
+          <p>Use points to prioritize:&ensp;<input type="tel" maxlength="7" placeholder="0"/>&ensp;Points</p>
+          <p>Your LogoVoice Points are <span class="blue">9999999</span> Points</p>
+        </div>
+      </div>
+
+      <div id="AQRight">
+        <div id="AQRTop">
+          <textarea id="script" placeholder="Please input the script of your recorded voice!"></textarea>
+        </div>
+
+        <div id="AQRMiddle">
+          <select name="scriptLanguege">
+            <option value="">select the language of your script!</option>
+            <option value="German">Deutsch</option>
+            <option value="English">English</option>
+            <option value="Spanish">español</option>
+            <option value="French">français</option>
+            <option value="Croatian">hrvatski</option>
+            <option value="Italian">italiano</option>
+            <!-- オランダ語 -->
+            <option value="Dutch">Nederlands</option>
+            <!-- ポーランド語 -->
+            <option value="Polish">polski</option>
+            <option value="Portuguese">português</option>
+            <option value="Vietnamese">Tiếng Việt</option>
+            <option value="Turkish">Türkçe</option>
+            <option value="Russian">русский</option>
+            <option value="Arabic">العربية</option>
+            <option value="Thai">ไทย</option>
+            <option value="Korean">한국어</option>
+            <option value="simplified_Chinese">中文 (简体)</option>
+            <option value="traditional_Chinese">中文 (繁體)</option>
+            <option value="Japanese">日本語</option>
+          </select>
+        </div>
+
+        <div class="AQBtnBg">
+          <button class="Btn AQBtn resetBtn">Ask Question</button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <div id="login" class="form">
+      <div class="formClose">
+        <div></div>
+        <div></div>
+      </div>
+      <input name="loginUN" type="text" placeholder="Your Name"/><br/>
+      <input name="loginPW" type="password" placeholder="Password"/><br/>
+      <div class="BtnBg loginBtnBg">
+        <button name="login" class="Btn loginBtn formLgBtn">Login</button>
+      </div>
+      <div class="divider">
+        <p>New to LogoVoice?</p>
+      </div>
+      <div class="BtnBg RegBtnBg">
+        <button class="Btn RegBtn resetBtn">Register</button>
+      </div>
+    </div>
+
+    <div id="register" class="form">
+      <div class="formClose">
+        <div></div>
+        <div></div>
+      </div>
+      <input name="registerUN" type="text" placeholder="Your name"/><br/>
+
+      <div class="select_wrap">
+        <select name="motherTongue" class="address_select">
+          <option value="">select your mother tongue!</option>
+          <option value="German">Deutsch</option>
+          <option value="English">English</option>
+          <option value="Spanish">español</option>
+          <option value="French">français</option>
+          <option value="Croatian">hrvatski</option>
+          <option value="Italian">italiano</option>
+          <!-- オランダ語 -->
+          <option value="Dutch">Nederlands</option>
+          <!-- ポーランド語 -->
+          <option value="Polish">polski</option>
+          <option value="Portuguese">português</option>
+          <option value="Vietnamese">Tiếng Việt</option>
+          <option value="Turkish">Türkçe</option>
+          <option value="Russian">русский</option>
+          <option value="Arabic">العربية</option>
+          <option value="Thai">ไทย</option>
+          <option value="Korean">한국어</option>
+          <option value="simplified_Chinese">中文 (简体)</option>
+          <option value="traditional_Chinese">中文 (繁體)</option>
+          <option value="Japanese">日本語</option>
+        </select>
+      </div>
+
+
+      <input name="registerPW" type="password" placeholder="Password"/><br/>
+      <input name="Re_enterPW" type="password" placeholder="Re-enter password"/><br/>
+      <div class="BtnBg RegBtnBg">
+        <button class="Btn RegBtn resetBtn">Register</button>
+      </div>
+    </div>
+
+
+    <div id="resultMsg">
+      <div class="logRegMsg">
+        <p></p>
+      </div>
+    </div>
+
+
+
+
+    <script src="./js/test.js"></script>
+    <script src="./js/audio.js"></script>
+  </body>
+</html>

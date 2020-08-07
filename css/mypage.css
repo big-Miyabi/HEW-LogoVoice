@@ -1,0 +1,242 @@
+@charset "UTF-8";
+/* @font-face {
+    font-family: "Nunito-Regular";
+    src:url("../font/Nunito-Regular.ttf");
+}
+@font-face {
+    font-family: "Bree Serif";
+    src:url("../font/BreeSerif-Regular.ttf");
+}
+
+body,ul,li,p,h1,h2,button,textarea {
+  margin: 0;
+  padding: 0;
+}
+common.cssを通しているのでいらないかも
+*/
+
+/********** タグ部分 **********/
+#UserInfoTag {
+  margin-top: 32px;
+}
+
+#UserInfoTag ul {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+#UserInfoTag li {
+  display: flex;
+  width: 32%;
+  height: 32px;
+  border-radius: 10px 10px 0 0;
+  background: blue;
+  font-size: 20px;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#UserInfoTag li:nth-of-type(1) {
+  background: #f2d96e;
+}
+
+
+/********** ユーザー情報内 **********/
+#userInfo {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  padding: 40px 0;
+  border-radius: 0 0 10px 10px;
+  background: #f2d96e;
+  text-align: center;
+}
+
+.userImage {
+  padding-top: 12px;
+}
+
+.userImage img {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: #f6f6f6;
+  object-fit: cover;
+}
+
+label[for="file_photo"] {
+  color: white;
+  background-color: #9091c3;
+  padding: 6px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+label[for="file_photo"]:hover {
+  color: white;
+  background-color: #7574bc;
+  padding: 6px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+#file_photo {
+  display: none;
+}
+
+#otherLanguages, #profile, #introduce {
+  margin-top: 56px;
+}
+
+.dividend h3 {
+  width: 50%;
+  margin: 0 auto;
+  border-bottom: dashed 1px #74601f;
+}
+
+#userInfo table {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+#userInfo th:not(.lanName) {
+  text-align: left;
+}
+
+#userInfo tr td:nth-of-type(1) {
+  padding: 0 20px;
+  text-align: center;
+}
+
+#userInfo td:nth-of-type(2) {
+  text-align: left;
+}
+
+#profile table {
+  margin-top: 16px;
+}
+
+
+.language {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.lanName {
+  padding-bottom: 8px;
+  color: #7878a0;
+}
+
+.language th:not(.lanName) {
+  width: 105px;
+}
+
+#otherLanguages td:nth-of-type(2) {
+  text-align: left;
+}
+
+.language table:nth-of-type(1) {
+  margin-top: 16px !important;
+}
+
+#otherLanguages table:nth-of-type(n+2) {
+  margin-top: 24px;
+}
+
+#introduce p {
+  width: 80%;
+  margin: 16px auto 0;
+  text-align: center;
+}
+
+#promptLogin {
+  margin-top: 20px;
+}
+
+#promptLogin ul {
+  margin-top: 20px;
+}
+
+#editContain {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.edit {
+  background: none;
+  border: none;
+  color: #7878a0;
+}
+
+#introduce textarea {
+  width: 450px;
+  height: 150px;
+  margin-top: 16px;
+  padding: 5px;
+  font-family: 'Nunito-Regular';
+  font-size: 18px;
+}
+
+.updateBtnBg {
+  margin-top: 20px;
+}
+
+.updateBtn {
+  border-bottom: dashed 2px #debc03;
+  color: #debc03;
+  cursor: pointer;
+}
+
+.language_table {
+  position: relative;
+}
+
+.table_delete {
+  margin-right: 8px;
+  background: none;
+  border: none;
+  width: 20px;
+  height: 20px;
+  color: #692934;
+}
+
+#otherLanguages .language_table table tr:nth-last-of-type(1) td:nth-of-type(2) {
+  position: relative;
+}
+
+.cer_plus {
+  position: absolute;
+  top: 5px;
+  right: -16px;
+  background: none;
+  border: none;
+  color: #7878a0;
+}
+
+.cer_minus {
+  position: absolute;
+  top: 6px;
+  right: -32px;
+  background: none;
+  border: none;
+  color: #7878a0;
+}
+
+.table_plus {
+  width: 50px;
+  margin: 24px auto 0;
+  background: none;
+  border: none;
+  color: #7878a0;
+}
+
+.language_table table tr td input {
+  width: 100%;
+}
