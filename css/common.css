@@ -1,18 +1,30 @@
 @charset "UTF-8";
 @font-face {
-    font-family: "Nunito-Regular";
-    src:url("../font/Nunito-Regular.ttf");
+  font-family: "Nunito-Regular";
+  src: url("../font/Nunito-Regular.ttf");
 }
 @font-face {
-    font-family: "Bree Serif";
-    src:url("../font/BreeSerif-Regular.ttf");
+  font-family: "Bree Serif";
+  src: url("../font/BreeSerif-Regular.ttf");
 }
 @font-face {
-    font-family: "KosugiMaru-Regular";
-    src: url("../font/KosugiMaru-Regular.ttf");
+  font-family: "KosugiMaru-Regular";
+  src: url("../font/KosugiMaru-Regular.ttf");
 }
 
-body,ul,li,p,h1,h2,h3,table,th,tr,td,button,textarea {
+body,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+table,
+th,
+tr,
+td,
+button,
+textarea {
   margin: 0;
   padding: 0;
 }
@@ -29,7 +41,7 @@ body {
   min-width: 1219px;
   min-height: 67.1%;
   color: #282828;
-  font-family: 'Nunito-Regular','KosugiMaru-Regular';
+  font-family: "Nunito-Regular", "KosugiMaru-Regular";
 }
 
 .font-record {
@@ -69,7 +81,6 @@ body {
   transition: all 700ms 0s ease;
 }
 
-
 /********** 左カラム ***********/
 #leftColumn {
   position: fixed;
@@ -92,7 +103,8 @@ body {
   border-radius: 35px 35px 0 0;
 }
 
-.formClose, .AskQuestionClose {
+.formClose,
+.AskQuestionClose {
   position: absolute;
 }
 
@@ -141,12 +153,11 @@ body {
   top: 11.9px;
 }
 .innerCircle div:nth-of-type(2) {
-  top:21.7px;
+  top: 21.7px;
 }
 .innerCircle div:nth-of-type(3) {
   bottom: 11.9px;
 }
-
 
 /********** グローバルナビ **********/
 #GlobalNavi {
@@ -157,26 +168,28 @@ body {
   text-align: center;
 }
 
-#GlobalNavi li, .BtnBg, .Btn {
+#GlobalNavi li,
+.BtnBg,
+.Btn {
   margin: 0 auto;
   width: 96.5px;
 }
 
 #GlobalNavi a {
-  color : #74601f;
+  color: #74601f;
   font-weight: normal;
 }
 
 #GlobalNavi a:visited {
-  color : #74601f;
+  color: #74601f;
 }
 
 #GlobalNavi a:hover {
   color: #d3bd6c;
 }
 
-
-#GlobalNavi li:not(.Btn), .loginBtnBg {
+#GlobalNavi li:not(.Btn),
+.loginBtnBg {
   margin-bottom: 20px;
 }
 
@@ -184,7 +197,7 @@ body {
   border-bottom: dashed 1px;
   border-color: #74601f;
   color: #74601f;
-  font-family: 'Bree Serif';
+  font-family: "Bree Serif";
   font-weight: thin;
   letter-spacing: 0.05em;
   cursor: pointer;
@@ -202,7 +215,7 @@ body {
 
 #logo {
   display: block;
-  width:90%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -241,24 +254,22 @@ body {
 
 #please_login h2 span:nth-of-type(1) {
   color: #7574bc;
-  text-shadow:-1px 1px 1px #9cad00;
+  text-shadow: -1px 1px 1px #9cad00;
 }
 
 #please_login h2 span:nth-of-type(2) {
   color: #fad831;
-  text-shadow:-2px 2px 1px #ffad36,
-              0px 2px 1px #ffad36,
-              -2px 0px 1px #ffad36;
+  text-shadow: -2px 2px 1px #ffad36, 0px 2px 1px #ffad36, -2px 0px 1px #ffad36;
 }
 
 #please_login h2 span:nth-of-type(3) {
   color: #9cad00;
-  text-shadow:-1px 1px 1px #9cad00;
+  text-shadow: -1px 1px 1px #9cad00;
 }
 
 #please_login h2 span:nth-of-type(4) {
   color: #7574bc;
-  text-shadow:-1px 1px 1px #7574bc;
+  text-shadow: -1px 1px 1px #7574bc;
 }
 
 /********** Question部分 **********/
@@ -269,7 +280,7 @@ body {
   flex-direction: column;
 }
 
-.column:nth-of-type(n+2) {
+.column:nth-of-type(n + 2) {
   margin-top: 100px;
 }
 
@@ -297,7 +308,7 @@ body {
 .script_left img {
   width: 150px;
   height: 150px;
-  box-shadow:4px 4px 15px -3px #000;
+  box-shadow: 4px 4px 15px -3px #000;
   border-radius: 50%;
   background: #f6f6f6;
   object-fit: cover;
@@ -310,15 +321,13 @@ body {
 }
 
 .script_right p {
-  font-family: 'Nunito-Regular','KosugiMaru-Regular', sans-serif;
+  font-family: "Nunito-Regular", "KosugiMaru-Regular", sans-serif;
   font-size: 18px;
   line-height: 25px;
   margin: auto;
   color: #534c98;
-  text-shadow: 1px 1px 2px #fff,
-                2px 1px 2px #fff,
-                1px 2px 2px #fff,
-                2px 2px 2px #fff;
+  text-shadow: 1px 1px 2px #fff, 2px 1px 2px #fff, 1px 2px 2px #fff,
+    2px 2px 2px #fff;
 }
 
 /***** Question内中部 *****/
@@ -385,7 +394,7 @@ body {
   color: #7574bc;
   font-weight: bold;
   font-size: 35px;
-  font-family: 'Bree Serif';
+  font-family: "Bree Serif";
 }
 
 .skip_wrap {
@@ -427,12 +436,12 @@ body {
   display: none;
 }
 
-.vote label{
+.vote label {
   display: flex;
   width: 270px;
-  font-family: 'Nunito-Regular';
+  font-family: "Nunito-Regular";
   flex-flow: row nowrap;
-  position:relative;
+  position: relative;
   justify-content: center;
   cursor: pointer;
 }
@@ -539,7 +548,7 @@ label p:nth-of-type(3) {
   border: solid 3px #7574bc;
   border-radius: 10px;
   color: #7574bc;
-  font-family: 'Bree Serif';
+  font-family: "Bree Serif";
   font-size: 15px;
   cursor: pointer;
 }
@@ -580,8 +589,6 @@ label p:nth-of-type(3) {
   background: #b7c82b;
 }
 
-
-
 /********** 右カラム **********/
 #rightColumn {
   position: fixed;
@@ -600,7 +607,6 @@ label p:nth-of-type(3) {
   transition: all 550ms 0s ease;
 }
 
-
 .helpCircle img {
   position: absolute;
   top: 13.6%;
@@ -617,7 +623,8 @@ label p:nth-of-type(3) {
   color: #fad831;
 }
 
-#help p:nth-of-type(1),#help p:nth-of-type(2)  {
+#help p:nth-of-type(1),
+#help p:nth-of-type(2) {
   margin-bottom: 20px;
 }
 
@@ -650,7 +657,8 @@ label p:nth-of-type(3) {
   font-size: 30px; /*4.25vh*/
 }
 /* 閉じるボタン */
-.formClose div, .AskQuestionClose div {
+.formClose div,
+.AskQuestionClose div {
   position: absolute;
   display: inline-block;
   padding: 0;
@@ -669,7 +677,7 @@ label p:nth-of-type(3) {
   position: absolute;
   display: inline-block;
   top: 10px;
-  left: -515px;
+  left: -438px;
   padding: 0;
   width: 5px;
   height: 22px;
@@ -677,11 +685,13 @@ label p:nth-of-type(3) {
   cursor: pointer;
 }
 
-.formClose div:nth-of-type(1), .AskQuestionClose div:nth-of-type(1) {
+.formClose div:nth-of-type(1),
+.AskQuestionClose div:nth-of-type(1) {
   transform: rotate(45deg);
 }
 
-.formClose div:nth-of-type(2), .AskQuestionClose div:nth-of-type(2) {
+.formClose div:nth-of-type(2),
+.AskQuestionClose div:nth-of-type(2) {
   transform: rotate(-45deg);
 }
 
@@ -691,7 +701,7 @@ label p:nth-of-type(3) {
 }
 
 #login input {
-  margin-bottom: calc( (100% - 208px) * 0.244);
+  margin-bottom: calc((100% - 208px) * 0.244);
   border-color: #b7c82b;
   color: #b7c82b;
 }
@@ -717,7 +727,7 @@ label p:nth-of-type(3) {
   background-color: #fff;
   color: #9cad00;
   font-size: 15px;
-  font-family: 'Nunito-Regular';
+  font-family: "Nunito-Regular";
 }
 
 .divider::after {
@@ -730,7 +740,6 @@ label p:nth-of-type(3) {
   background-color: transparent;
   content: "";
 }
-
 
 /********** 会員登録フォーム **********/
 #register {
@@ -765,17 +774,17 @@ label p:nth-of-type(3) {
   background: #fff;
   color: #7574bc;
   font-size: 20px;
-  font-family: 'Nunito-Regular';
+  font-family: "Nunito-Regular";
   text-indent: 7px;
   vertical-align: middle;
-  outline:none;
+  outline: none;
   cursor: pointer;
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
 }
 
-#register select option{
+#register select option {
   background-color: #fff;
   color: #7574bc;
 }
@@ -790,18 +799,17 @@ label p:nth-of-type(3) {
 }
 
 .select_wrap::before {
-	position: absolute;
-	left: 83%;
-	width: 0;
-	height: 0;
-	padding: 0;
-	content: '';
-	border-left: 7px solid transparent;
-	border-right: 7px solid transparent;
-	border-top: 7px solid #7574bc;
-	pointer-events: none;
+  position: absolute;
+  left: 83%;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: "";
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #7574bc;
+  pointer-events: none;
 }
-
 
 /********** 共通ボタン **********/
 .Btn {
@@ -809,13 +817,13 @@ label p:nth-of-type(3) {
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
-  -webkit- transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
   border-top: 0;
   border-right: 0;
   border-left: 0;
   background: none;
   font-size: 20px;
-  font-family: 'Bree Serif';
+  font-family: "Bree Serif";
 }
 
 .BtnBg {
@@ -849,9 +857,9 @@ label p:nth-of-type(3) {
   color: #a165a8;
 }
 
-
 /**********  会員登録ボタン **********/
-#register .RegBtnBg, #login .RegBtnBg {
+#register .RegBtnBg,
+#login .RegBtnBg {
   border: solid 2px #7574bc;
 }
 
@@ -859,7 +867,6 @@ label p:nth-of-type(3) {
   border-bottom: dashed 2px #7574bc;
   color: #7574bc;
 }
-
 
 /**********  フォーム内データ送信結果 **********/
 #resultMsg {
@@ -905,7 +912,6 @@ label p:nth-of-type(3) {
   border: solid 5px #fff;
 }
 
-
 /********** 質問フォーム **********/
 #AskQuestion {
   /* display: none; */
@@ -924,7 +930,7 @@ label p:nth-of-type(3) {
   flex-flow: row wrap;
   justify-content: space-around;
   align-content: space-around;
-  transition: all 500ms 300ms cubic-bezier(.48,1.21,.77,1.01);
+  transition: all 500ms 300ms cubic-bezier(0.48, 1.21, 0.77, 1.01);
 }
 
 #AskQuestionFilter {
@@ -980,29 +986,29 @@ label p:nth-of-type(3) {
 }
 
 .progressCircle::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -80px;
-    width: 160px;
-    height: 160px;
-    background: #ebc2b5;
-    transform-origin: right 80px;
-    z-index: 2;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -80px;
+  width: 160px;
+  height: 160px;
+  background: #ebc2b5;
+  transform-origin: right 80px;
+  z-index: 2;
 }
 
 .progressCircle::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0px;
-    left: 80px;
-    width: 160px;
-    height: 160px;
-    background: #ebc2b5;
-    transform-origin: left 80px;
-    z-index: 3;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 80px;
+  width: 160px;
+  height: 160px;
+  background: #ebc2b5;
+  transform-origin: left 80px;
+  z-index: 3;
 }
 
 #recorder {
@@ -1020,28 +1026,34 @@ label p:nth-of-type(3) {
 }
 
 @keyframes rotate-circle-right {
-    0%   {
-        transform: rotate(0deg);
-        background: #ebc2b5;
-    }
-    50%  {
-        transform: rotate(180deg);
-        background: #ebc2b5;
-    }
-    50.01% {
-        transform: rotate(360deg);
-        background: #fa8155;
-    }
-    100% {
-        transform: rotate(360deg);
-        background: #fa8155;
-    }
+  0% {
+    transform: rotate(0deg);
+    background: #ebc2b5;
+  }
+  50% {
+    transform: rotate(180deg);
+    background: #ebc2b5;
+  }
+  50.01% {
+    transform: rotate(360deg);
+    background: #fa8155;
+  }
+  100% {
+    transform: rotate(360deg);
+    background: #fa8155;
+  }
 }
 
 @keyframes rotate-circle-left {
-    0%   { transform: rotate(0deg); }
-    50%  { transform: rotate(0deg); }
-    100% { transform: rotate(180deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
 }
 
 #recording_control_wrap {
@@ -1068,7 +1080,7 @@ label p:nth-of-type(3) {
   width: 10px;
   height: 30px;
   background: #f4d4b0;
-  content: '';
+  content: "";
   /* JSで追加するアニメーション↓ */
   /* animation: progress 30s linear 0s forwards paused; */
 }
@@ -1100,7 +1112,7 @@ label p:nth-of-type(3) {
   color: #f4d4b0;
   font-weight: bold;
   font-size: 28px;
-  font-family: 'Bree Serif';
+  font-family: "Bree Serif";
 }
 
 .RAControlBtn:not(.pause) {
@@ -1120,17 +1132,15 @@ label p:nth-of-type(3) {
   margin-top: 5px;
 }
 
-
-
-
-
-#AQLMiddle, #AQRMiddle {
+#AQLMiddle,
+#AQRMiddle {
   width: 100%;
   height: 44px;
   background: red;
 }
 
-#AQLMiddle select, #AQRMiddle select {
+#AQLMiddle select,
+#AQRMiddle select {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -1142,28 +1152,28 @@ label p:nth-of-type(3) {
   background: #fff;
   color: #f49d00;
   font-size: 20px;
-  font-family: 'Nunito-Regular';
+  font-family: "Nunito-Regular";
   text-indent: 7px;
   vertical-align: middle;
-  outline:none;
+  outline: none;
   cursor: pointer;
   -webkit-appearance: button;
   -moz-appearance: button;
-  appearance: button;
+  appearance: none;
 }
 
 #AQLMiddle::before {
-	position: absolute;
+  position: absolute;
   top: 62.6%;
   left: 42.6%;
-	width: 0;
-	height: 0;
-	padding: 0;
-	content: '';
-	border-left: 7px solid transparent;
-	border-right: 7px solid transparent;
-	border-top: 7px solid #ffad36;
-	pointer-events: none;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: "";
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #ffad36;
+  pointer-events: none;
 }
 
 #AQLBottom {
@@ -1179,7 +1189,7 @@ label p:nth-of-type(3) {
 #AQLBottom input {
   width: 9em;
   color: #f49d00;
-  font-family: 'Nunito-Regular';
+  font-family: "Nunito-Regular";
   font-size: 15px;
   text-align: right;
   line-height: 25px;
@@ -1229,7 +1239,7 @@ label p:nth-of-type(3) {
   padding: 5px;
   border: solid 2px #ffad36;
   color: #f49d00;
-  font-family: 'Nunito-Regular';
+  font-family: "Nunito-Regular";
   font-size: 20px;
   line-height: 25px;
 }
@@ -1261,7 +1271,7 @@ label p:nth-of-type(3) {
   width: 0;
   height: 0;
   padding: 0;
-  content: '';
+  content: "";
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-top: 7px solid #ffad36;
