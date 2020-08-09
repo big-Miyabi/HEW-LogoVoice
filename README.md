@@ -18,6 +18,7 @@
 - CSS
 - JavaScript
 - JQuery
+- axios
 - Web Audio API
 - PHP
 - MySQL
